@@ -4,20 +4,19 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import NotFound from "./NotFound"
-import Body from "./SearchBody"
+import Body from "./Body"
 
 class App extends Component {
-  state = {
-    ants: []
-  }
   render() {
- 
+
     return (
-      <div className="App">
+      <div className="App" align="center">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <Body />
+        <body className="App-Body" align="center">
+          <Body />
+        </body>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" />
