@@ -9,8 +9,8 @@ class SearchBody extends Component {
         colour: "",
         location: "",
         rating: "",
-        topAnt: 2,
-        middleAnt: 1,
+        topAnt: 1,
+        middleAnt: 0,
         bottomAnt: 0,
         loading: true,
         ants: [],
@@ -21,6 +21,7 @@ class SearchBody extends Component {
         window.addEventListener('wheel', this.handleScroll, true)
         fetchAnts().then(ants => {
             this.setState({ ants, loading: false })
+            this.setState({ bottomAnt: this.state.ants.length-1 })
         }).catch(() => {
             this.props.history.push('/404')
         })
@@ -35,7 +36,10 @@ class SearchBody extends Component {
 
     handleClick = (event) => {
         fetchAnts(this.state.colour, this.state.location, this.state.rating).then(ants => {
-            this.setState({ ants, topAnt: 2, middleAnt: 1, bottomAnt: 0 })
+            this.setState({ ants })
+            if (this.state.ants.length > 1) this.setState({ topAnt: 1, middleAnt: 0, bottomAnt: this.state.ants.length-1 })
+            else {this.setState({ topAnt: 2, middleAnt: 0, bottomAnt: 2 })}
+           
         })
     }
 
@@ -45,7 +49,7 @@ class SearchBody extends Component {
         console.log("bot", this.state.bottomAnt)
         console.log("mid", this.state.middleAnt)
         console.log("top", this.state.topAnt)
-        if (e.deltaY === 3) {
+        if (e.deltaY === 3 && this.state.ants.length > 1) {
 
             if (this.state.bottomAnt === this.state.ants.length - 1) this.setState({ bottomAnt: 0 })
             else {this.setState({ bottomAnt: this.state.bottomAnt + 1 })}
@@ -55,7 +59,7 @@ class SearchBody extends Component {
             else {this.setState({ topAnt: this.state.topAnt + 1 })}
         }
         //up
-        if (e.deltaY === -3) {
+        if (e.deltaY === -3 && this.state.ants.length > 1) {
 
             if (this.state.bottomAnt === 0) this.setState({ bottomAnt: this.state.ants.length - 1 })
             else {this.setState({ bottomAnt: this.state.bottomAnt - 1 })}
