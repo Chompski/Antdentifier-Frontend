@@ -3,15 +3,15 @@ import logo from './ants.gif';
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-
 import NotFound from "./NotFound"
-import Body from "./Body"
+import Body from "./SearchBody"
 
 class App extends Component {
   state = {
     ants: []
   }
   render() {
+ 
     return (
       <div className="App">
         <header className="App-header">
