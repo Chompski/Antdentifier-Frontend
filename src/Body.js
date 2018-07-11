@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
+import Ant from './ant head.gif'
+import BG from './background.png';
 
 
 
@@ -14,7 +16,7 @@ class Body extends Component {
         bottomAnt: 0,
         loading: true,
         ants: [],
-        fakeAnt: { species: "", images: ["https://i.vimeocdn.com/portrait/4907835_300x300"] }
+        fakeAnt: { species: "", images: [Ant] }
     }
 
     componentDidMount() {
@@ -45,10 +47,6 @@ class Body extends Component {
 
     handleScroll = (e) => {
         //down
-        console.log(this.state.ants.length)
-        console.log("bot", this.state.bottomAnt)
-        console.log("mid", this.state.middleAnt)
-        console.log("top", this.state.topAnt)
         if (e.deltaY === 3 && this.state.ants.length > 1) {
 
             if (this.state.bottomAnt === this.state.ants.length - 1) this.setState({ bottomAnt: 0 })
@@ -84,10 +82,12 @@ class Body extends Component {
             !loading ?
                 <React.Fragment>
                     <div>
-                        <form className="App-Queries" align="center">
+                        <form className="App-Queries">
                             <div class="form-group">
-                                <p> Colour </p>
-                                <select name="colour" placeholder='Ant Colour' onChange={this.onChange}>
+                            <div align="center">
+                                <p><b>Colour</b></p>
+                                </div>
+                                <select name="colour" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
                                     <option value="black">Black</option>
                                     <option value="red">Red</option>
@@ -95,8 +95,10 @@ class Body extends Component {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <p> Location </p>
-                                <select name="location" placeholder='Ant Location' onChange={this.onChange}>
+                                <div align="center">
+                                    <p><b>Location</b></p>
+                                </div>
+                                <select name="location" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
                                     <option value="united kingdom">UK</option>
                                     <option value="europe">Europe</option>
@@ -105,8 +107,10 @@ class Body extends Component {
                             </div>
 
                             <div class="form-group">
-                                <p> Rating </p>
-                                <select name="rating" onChange={this.onChange}>
+                            <div align="center">
+                                <p><b>Rating</b></p>
+                                </div>
+                                <select name="rating" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -115,24 +119,38 @@ class Body extends Component {
                                     <option value="5">5</option>
                                 </select>
                             </div>
-
-                            <input className='button' type="button" value="Search" onClick={this.handleClick} />
-
+                            <div class="form-group">
+                                <input className='button' type="button" value="Search" onClick={this.handleClick} />
+                            </div>
                         </form>
                     </div>
-                    <div className="Body-Antboxes" align="center">
 
+                    <div className="Body-Antboxes" align="center">
                         <div className="Body-Antbox">
                             <img src={bot.images[0]} alt="logo" width="100px" height="100px" className="Antbox-Image" />
                         </div>
-
                         <div>
                             <div align="center" className="Body-Description">
-                            <h2> {mid.species} </h2>
-                                <p> {mid.description} </p>
+                                <h2> {mid.species} </h2>
+                                <p className="Body-Description-Text"> {mid.description} </p>
                             </div>
+                            <div align="center" className="Body-Info">
+                                <h3> Location :</h3>
+                                <p> {mid.location} </p>
+                                <h3> Hibernation:</h3>
+                                <p> {mid.hibernation} </p>
+                                <h3> Nest Temperature:</h3>
+                                <p> {mid.nestTemperature} </p>
+                                <h3> Diet:</h3>
+                                <p> {mid.diet} </p>
+                            </div>
+                            <div align="center" className="Body-Images">
+                                <img src={mid.images[1]} alt="Image of ant" width="160px" height="160px" className="Body-Image" />
+                                <img src={mid.images[2]} alt="Image of ant" width="160px" height="160px" className="Body-Image" />
+                            </div>
+
                             <div>
-                                <img src={mid.images[0]} alt="logo" width="160px" height="160px" className="Antbox-Image" />
+                                <img src={mid.images[0]} alt="logo" width="180px" height="180px" className="Antbox-ImageMid" />
                             </div>
                         </div>
 

@@ -3,10 +3,16 @@
 width: 100%;
 }
 
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
 .App {
-background-color: darkolivegreen;
-background-size: auto;
-height:959px ;
 }
 
 .App-Body {
