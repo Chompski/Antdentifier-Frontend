@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
 import Ant from './ant head.gif'
-import BG from './background.png';
-
 
 
 class Body extends Component {
@@ -16,7 +14,7 @@ class Body extends Component {
         bottomAnt: 0,
         loading: true,
         ants: [],
-        fakeAnt: { species: "", images: [Ant] }
+        fakeAnt: { species: "No ants found..", images: [Ant,Ant,Ant], location:"N/A", hibernation:"N/A", nestTemperature:"N/A", diet:"N/A", life:"N/A" }
     }
 
     componentDidMount() {
@@ -143,10 +141,12 @@ class Body extends Component {
                                 <p> {mid.nestTemperature} </p>
                                 <h3> Diet:</h3>
                                 <p> {mid.diet} </p>
+                                <h3> Life span of queen:</h3>
+                                <p> {mid.life} </p>
                             </div>
                             <div align="center" className="Body-Images">
-                                <img src={mid.images[1]} alt="Image of ant" width="160px" height="160px" className="Body-Image" />
-                                <img src={mid.images[2]} alt="Image of ant" width="160px" height="160px" className="Body-Image" />
+                                <img src={mid.images[1]} alt="ant one" width="160px" height="160px" className="Body-Image" />
+                                <img src={mid.images[2]} alt="ant two" width="160px" height="160px" className="Body-Image" />
                             </div>
 
                             <div>
