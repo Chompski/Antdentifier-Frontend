@@ -117,6 +117,18 @@
     border-color: #000000;
 }
 
+.Body-Arrows {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 49%;
+    left: 52.5%;
+}
+
+.Body-Arrow {
+margin: 20%;
+}
+
 .Antbox-Image {
     max-height:100%;
     max-width: 100%;

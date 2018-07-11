@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
 import Ant from './ant head.gif'
+import up from './arrowUp.png'
+import down from './arrowDown.png'
 
 
 class Body extends Component {
@@ -45,7 +47,8 @@ class Body extends Component {
 
     handleScroll = (e) => {
         //down
-        if (e.deltaY === 3 && this.state.ants.length > 1) {
+        console.log(e.target.alt)
+        if ((e.deltaY === 3 && this.state.ants.length > 1) || (e.target.alt === "down" && this.state.ants.length > 1)) {
 
             if (this.state.bottomAnt === this.state.ants.length - 1) this.setState({ bottomAnt: 0 })
             else { this.setState({ bottomAnt: this.state.bottomAnt + 1 }) }
@@ -55,7 +58,7 @@ class Body extends Component {
             else { this.setState({ topAnt: this.state.topAnt + 1 }) }
         }
         //up
-        if (e.deltaY === -3 && this.state.ants.length > 1) {
+        if ((e.deltaY === -3 && this.state.ants.length > 1) || (e.target.alt === "up" && this.state.ants.length > 1)) {
 
             if (this.state.bottomAnt === 0) this.setState({ bottomAnt: this.state.ants.length - 1 })
             else { this.setState({ bottomAnt: this.state.bottomAnt - 1 }) }
@@ -98,9 +101,9 @@ class Body extends Component {
                                 </div>
                                 <select name="location" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
-                                    <option value="united kingdom">UK</option>
-                                    <option value="europe">Europe</option>
-                                    <option value="asian">Asia</option>
+                                    <option value="United Kingdom">UK</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Asian">Asia</option>
                                 </select>
                             </div>
 
@@ -147,6 +150,11 @@ class Body extends Component {
                             <div align="center" className="Body-Images">
                                 <img src={mid.images[1]} alt="ant one" width="160px" height="160px" className="Body-Image" />
                                 <img src={mid.images[2]} alt="ant two" width="160px" height="160px" className="Body-Image" />
+                            </div>
+
+                             <div align="center" className="Body-Arrows">
+                                <img src={up} alt="up" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll}/>
+                                <img src={down} alt="down" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll}/>
                             </div>
 
                             <div>
