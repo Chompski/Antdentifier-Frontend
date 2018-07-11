@@ -10,9 +10,11 @@ export const fetchAnts = async (colour, location, rating) => {
         colloc: `?colour=${colour}&location=${location}`,
         colrat: `?colour=${colour}&rating=${rating}`,
         locrat: `?location=${location}&rating=${rating}`,
+        collocrat: `?colour=${colour}&location=${location}&rating=${rating}`,
     }
-
-    if (location && rating) { outcome = field.locrat }
+    
+    if (colour && location && rating) {outcome = field.collocrat}
+    else if (location && rating) { outcome = field.locrat }
     else if (colour && rating) { outcome = field.colrat }
     else if (colour && location) { outcome = field.colloc }
     else if (colour) { outcome = field.colour }
