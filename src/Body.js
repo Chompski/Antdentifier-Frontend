@@ -103,7 +103,7 @@ class Body extends Component {
                                     <option value="">All</option>
                                     <option value="United Kingdom">UK</option>
                                     <option value="Europe">Europe</option>
-                                    <option value="Asian">Asia</option>
+                                    <option value="Asia">Asia</option>
                                 </select>
                             </div>
 
@@ -146,6 +146,8 @@ class Body extends Component {
                                 <p> {mid.diet} </p>
                                 <h3> Life span of queen:</h3>
                                 <p> {mid.life} </p>
+                                <h3> Keeping difficulty rating:</h3>
+                                <p><b>{mid.rating}</b></p>
                             </div>
                             <div align="center" className="Body-Images">
                                 <img src={mid.images[1]} alt="ant one" width="160px" height="160px" className="Body-Image" />
