@@ -22,7 +22,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" />
-            <Route path="*" render={(props) => <NotFound {...props} />} />
+            <Route exact path="*" render={(props) => <NotFound {...props} />} />
           </Switch>
         </BrowserRouter>
 
