@@ -155,8 +155,8 @@ class Body extends Component {
                                 <p><b>{mid.rating}</b></p>
                             </div>
                             <div align="center" className="Body-Images">
-                                <img src={mid.images[1]} alt="ant one" width="180px" height="180px" className="Body-Image" />
-                                <img src={mid.images[2]} alt="ant two" width="180px" height="180px" className="Body-Image" />
+                                <a href={mid.images[1]} target="_blank"> <img src={mid.images[1]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
+                                <a href={mid.images[2]} target="_blank"> <img src={mid.images[2]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
                             </div>
                         
                             <div align="center" className="Body-Arrows">
