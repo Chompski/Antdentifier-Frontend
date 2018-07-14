@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
 import Ant from './ant head.gif'
+import Loading from './loading.png'
 import up from './arrowUp.png'
 import down from './arrowDown.png'
 
@@ -16,13 +17,13 @@ class Body extends Component {
         bottomAnt: 0,
         loading: true,
         ants: [],
-        fakeAnt: { species: "No ants found..", images: [Ant,Ant,Ant], location:"N/A", hibernation:"N/A", nestTemperature:"N/A", diet:"N/A", life:"N/A" }
+        fakeAnt: { species: "No ants found meeting your criteria..", images: [Ant, Ant, Ant], location: "N/A", hibernation: "N/A", nestTemperature: "N/A", diet: "N/A", life: "N/A" }
     }
 
     componentDidMount() {
         window.addEventListener('wheel', this.handleScroll, true)
         fetchAnts().then(ants => {
-            this.setState({ ants, loading: false })
+            this.setState({ ants, loading: false})
             this.setState({ bottomAnt: this.state.ants.length - 1 })
         }).catch(() => {
             this.props.history.push('/404')
@@ -41,13 +42,11 @@ class Body extends Component {
             this.setState({ ants })
             if (this.state.ants.length > 1) this.setState({ topAnt: 1, middleAnt: 0, bottomAnt: this.state.ants.length - 1 })
             else { this.setState({ topAnt: 2, middleAnt: 0, bottomAnt: 2 }) }
-
         })
     }
 
     handleScroll = (e) => {
         //down
-        console.log(e.target.alt)
         if ((e.deltaY === 3 && this.state.ants.length > 1) || (e.target.alt === "down" && this.state.ants.length > 1)) {
 
             if (this.state.bottomAnt === this.state.ants.length - 1) this.setState({ bottomAnt: 0 })
@@ -85,14 +84,15 @@ class Body extends Component {
                     <div>
                         <form className="App-Queries">
                             <div class="form-group">
-                            <div align="center">
-                                <p><b>Colour</b></p>
+                                <div align="center">
+                                    <p><b>Colour</b></p>
                                 </div>
                                 <select name="colour" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
                                     <option value="black">Black</option>
                                     <option value="red">Red</option>
                                     <option value="yellow">Yellow</option>
+                                    <option value="brown">Brown</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -104,12 +104,13 @@ class Body extends Component {
                                     <option value="United Kingdom">UK</option>
                                     <option value="Europe">Europe</option>
                                     <option value="Asia">Asia</option>
+                                    <option value="America">America</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                            <div align="center">
-                                <p><b>Rating</b></p>
+                                <div align="center">
+                                    <p><b>Rating</b></p>
                                 </div>
                                 <select name="rating" onChange={this.onChange} className="form-dropdown">
                                     <option value="">All</option>
@@ -131,12 +132,16 @@ class Body extends Component {
                             <img src={bot.images[0]} alt="logo" width="100px" height="100px" className="Antbox-Image" />
                         </div>
                         <div>
+                            <div align="center" className="Body-List">
+                                <p>Results</p>
+                                <h2> <b>{this.state.ants.length}</b> </h2>
+                            </div>
                             <div align="center" className="Body-Description">
                                 <h2> {mid.species} </h2>
                                 <p className="Body-Description-Text"> {mid.description} </p>
                             </div>
                             <div align="center" className="Body-Info">
-                                <h3> Location :</h3>
+                                <h3> Location:</h3>
                                 <p> {mid.location} </p>
                                 <h3> Hibernation:</h3>
                                 <p> {mid.hibernation} </p>
@@ -150,13 +155,13 @@ class Body extends Component {
                                 <p><b>{mid.rating}</b></p>
                             </div>
                             <div align="center" className="Body-Images">
-                                <img src={mid.images[1]} alt="ant one" width="160px" height="160px" className="Body-Image" />
-                                <img src={mid.images[2]} alt="ant two" width="160px" height="160px" className="Body-Image" />
+                                <img src={mid.images[1]} alt="ant one" width="180px" height="180px" className="Body-Image" />
+                                <img src={mid.images[2]} alt="ant two" width="180px" height="180px" className="Body-Image" />
                             </div>
-
-                             <div align="center" className="Body-Arrows">
-                                <img src={up} alt="up" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll}/>
-                                <img src={down} alt="down" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll}/>
+                        
+                            <div align="center" className="Body-Arrows">
+                                <img src={up} alt="up" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
+                                <img src={down} alt="down" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
                             </div>
 
                             <div>
@@ -172,8 +177,8 @@ class Body extends Component {
 
                 </React.Fragment>
                 :
-                <div>
-                    <p> loading.. </p>
+                <div className="App-Loading">
+                     <img src={Loading} alt="Loading..." />
                 </div>
         );
     }

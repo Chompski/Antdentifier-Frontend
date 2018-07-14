@@ -11,16 +11,26 @@
     border-style: double;
     border-width: 3px;
     border-color: #000000;
-    top: 50%;
+    top: 51%;
     left: 36%;
     width: 4.5%;
     background-color: rgb(129, 91, 52);
     display: flex;
     flex-direction: column;
    position: fixed;
-   box-shadow: rgb(51, 51, 51) 0 4px 4px;
+   box-shadow: rgb(51, 51, 51) 0 5px 5px;
    font-family: "pixelex",Arial, sans-serif;
    font-size: 78%;
+}
+
+.App-Loading {
+    left: 30%;
+    position: fixed;
+}
+
+.App-Missing {
+    left: 26%;
+    position: fixed;
 }
 
 .form-dropdown{
@@ -50,7 +60,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 32%;
+    top: 33%;
     left: 42%;
 }
 
@@ -67,10 +77,10 @@
     background-color: rgb(129, 91, 52);
     width: 25%;
     top: 37%;
-    left: 8%;
+    left: 8.5%;
     position: fixed;
-    font-size: 100%;
-    box-shadow: rgb(51, 51, 51) 0 4px 4px;
+    font-size: 90%;
+    box-shadow: rgb(51, 51, 51) 0 5px 5px;
     font-family: "pixelex",Arial, sans-serif;
 }
 
@@ -85,12 +95,12 @@
     border-width: 3px;
     border-color: #000000;
     background-color: rgb(129, 91, 52);
-    width: 19%;
+    width: 15%;
     top: 37%;
     left: 59%;
     position: fixed;
-    font-size: 100%;
-    box-shadow: rgb(51, 51, 51) 0 4px 4px;
+    font-size: 90%;
+    box-shadow: rgb(51, 51, 51) 0 5px 5px;
     font-family: "pixelex",Arial, sans-serif;
 }
 
@@ -103,15 +113,15 @@
     border-width: 3px;
     border-color: #000000;
     background-color: rgb(129, 91, 52);
-    width: 9.2%;
+    width: 11%;
     top: 37%;
-    left: 80%;
+    left: 76%;
     position: fixed;
-    box-shadow: rgb(51, 51, 51) 0 4px 4px;
+    box-shadow: rgb(51, 51, 51) 0 5px 5px;
 }
 
 .Body-Image {
-    margin: 2%;
+    margin: 5%;
     border-style: solid;
     border-width: 2px;
     border-color: #000000;
@@ -121,12 +131,26 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 49%;
+    top: 49.5%;
     left: 52.5%;
 }
 
 .Body-Arrow {
 margin: 20%;
+}
+
+.Body-List {
+    padding: 4px 4px;
+    border-radius: 20px;
+    border-style: double;
+    border-width: 3px;
+    border-color: #000000;
+    background-color: rgb(129, 91, 52);
+    position: fixed;
+    top: 37%;
+    left: 36%;
+    font-size: 80%;
+    font-family: "pixelex",Arial, sans-serif;
 }
 
 .Antbox-Image {
