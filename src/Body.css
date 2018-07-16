@@ -369,7 +369,7 @@ p{
     }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) and (max-height: 768px){
 
     .App-Queries{
         top: 46%;
