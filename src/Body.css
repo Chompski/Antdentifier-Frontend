@@ -6,6 +6,28 @@
     url("css/fonts/pixelex-webfont.ttf") format("opentype"),
     }
 
+.App-logo {
+        top: 0%;
+    width: 100%;
+    }
+    
+#bg {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+    
+.App-Body {
+        top: 45%;
+        left: 43%;
+    width:fit-content;
+    height:100%;
+    position: fixed;
+    }
+
 .App-Queries{
     border-radius: 20px;
     border-style: double;
@@ -162,7 +184,7 @@ margin: 20%;
     border-color: chartreuse;
     background-color: darkgreen;
     position: fixed;
-    top: 75.5%;
+    top: 75%;
     left: 35.5%;
     font-size: 80%;
     box-shadow: rgb(51, 51, 51) 0 5px 5px;
@@ -216,7 +238,6 @@ p{
 
 @media screen and (max-width: 1920px){
     .App-Queries{
-        top: 54%;
         left: 36%;
         width: 4.5%;
        font-size: 78%;
@@ -231,7 +252,6 @@ p{
     }
     
     .Body-Antboxes {
-        top: 35%;
         left: 42%;
     }
     
@@ -242,44 +262,36 @@ p{
     .Body-Description {
         padding: 8px 8px;
         width: 27%;
-        top: 39%;
         left: 6%;
         font-size: 100%;
     }
     
     .Body-Info {
         width: 17%;
-        top: 39%;
         left: 60%;
         font-size: 95%;
     }
     
     .Body-Images {
-        top: 39%;
         left: 80%;
         position: fixed;
     }
-    
-    .Body-Arrows {
-        top: 53%;
+
+    .Body-Antboxes {
+        left: 42%;
     }
     
     .Body-Arrow {
-    margin: 25%;
+        margin: 25%;
     }
     
     .Body-List {
-        top: 39%;
         font-size: 90%;
     }
     
     .Body-Random {
-        padding: 35px 2px;
-        top: 78%;
         left: 35.5%;
         font-size: 95%;
-        box-shadow: rgb(51, 51, 51) 0 5px 5px;
-        font-family: "pixelex",Arial, sans-serif;
     }
    
     p{
@@ -289,7 +301,6 @@ p{
 
 @media screen and (max-width: 1280px){
     .App-Queries{
-        top: 50%;
         left: 34%;
         width:6.6%;
        font-size: 78%;
@@ -306,7 +317,6 @@ p{
     }
     
     .Body-Antboxes {
-        top: 31%;
         left: 42%;
     }
     
@@ -316,7 +326,6 @@ p{
     
     .Body-Description {
         width: 28%;
-        top: 34%;
         left: 3%;
         font-size: 78%;
     }
@@ -327,14 +336,12 @@ p{
     
     .Body-Info {
         width: 18%;
-        top: 34%;
         left: 61.5%;
         font-size: 72%;
     }
     
     .Body-Images {
         width: 15%;
-        top: 34%;
         left: 82%;
     }
     
@@ -346,7 +353,6 @@ p{
     }
     
     .Body-Arrows {
-        top: 33%;
         left: 54%;
     }
     
@@ -357,26 +363,24 @@ p{
     }
     
     .Body-List {
-        top: 34%;
         left: 34%;
     }
     
     .Body-Random {
         padding: 30px 2px;
-        top: 82%;
         left: 33.5%;
         font-size: 70%;
     }
+    p{
+        margin: 2%;
+    }
 }
 
-@media screen and (max-width: 1024px) and (max-height: 768px){
+@media screen and (max-width: 1024px){
 
     .App-Queries{
-        top: 46%;
         left: 33.5%;
         width: 8%;
-       box-shadow: rgb(51, 51, 51) 0 5px 5px;
-       font-family: "pixelex",Arial, sans-serif;
        font-size: 78%;
     }
     
@@ -390,31 +394,12 @@ p{
         position: fixed;
     }
     
-    .form-dropdown{
-        width: 78px;
-        padding: 6px 6px;
-        border-style: double;
-        border-width: 3px;
-        border-color: chartreuse;
-        background-color: darkgreen;
-        color: chartreuse;
-        font-weight: bold;
-        font-size: 70%;
-        font-family: "pixelex",Arial, sans-serif;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
-        margin: 3%;
-    }
-    
     .form-group {
         margin: 1%;
         width: fit-content;
     }
     
     .Body-Antboxes {
-        top: 23.5%;
         left: 42.5%;
     }
     
@@ -424,7 +409,6 @@ p{
     
     .Body-Description {
         width: 28%;
-        top: 26%;
         left: 3%;
         font-size: 70%;
     }
@@ -435,14 +419,12 @@ p{
     
     .Body-Info {
         width: 13%;
-        top: 26%;
         left: 64%;
         font-size: 70%;
     }
     
     .Body-Images {
         width: 16%;
-        top: 26%;
         left: 80%;
         position: fixed;
     }
@@ -454,7 +436,6 @@ p{
     }
     
     .Body-Arrows {
-        top: 26%;
         left: 57%;
     }
     
@@ -465,15 +446,154 @@ p{
     }
     
     .Body-List {
-        top: 26%;
         left: 34%;
         font-size: 80%;
     }
     
     .Body-Random {
-        top: 77%;
         left: 34%;
         font-size: 70%;
     }
-    
+}
+
+@media screen and (max-height: 1080px){
+    .App-Queries{
+        top: 57%;
+    }
+    .Body-Antboxes {
+       top: 38%;
+    }
+    .Body-Description {
+        top: 38%;
+    }
+    .Body-Info {
+        top: 38%;
+    }
+    .Body-Images {
+        top: 38%;
+    }
+    .Body-Arrows {
+        top: 36%;
+    }
+    .Body-List {
+        top: 38%;
+    }
+    .Body-Random {
+        top: 86%;
+    } 
+}
+@media screen and (max-height: 900px){
+    .App-Queries{
+        top: 58%;
+    }
+    .Body-Antboxes {
+       top: 35%;
+    }
+    .Body-Description {
+        top: 40%;
+    }
+    .Body-Info {
+        top: 40%;
+    }
+    .Body-Images {
+        top: 40%;
+    }
+    .Body-Arrows {
+        top: 56%;
+    }
+    .Body-List {
+        top: 40%;
+    }
+    .Body-Random {
+        top: 86%;
+    } 
+}
+@media screen and (max-height: 768px){
+    .App-Queries{
+        top: 48%;
+    }
+    .Body-Antboxes {
+       top: 26%;
+    }
+    .Body-Description {
+        top: 28%;
+    }
+    .Body-Info {
+        top: 28%;
+    }
+    .Body-Images {
+        top: 28%;
+    }
+    .Body-Arrows {
+        top: 28%;
+    }
+    .Body-List {
+        top: 28%;
+    } 
+    .Body-Random {
+        top: 79.5%;
+    }
+    p {
+        font-size: 85%;
+    }
+}
+
+@media screen and (max-height: 720px){
+    .App-Queries{
+        top: 53%;
+    }
+    .Body-Antboxes {
+       top: 31%;
+    }
+    .Body-Description {
+        top: 34%;
+    }
+    .Body-Info {
+        top: 34%;
+    }
+    .Body-Images {
+        top: 34%;
+    }
+    .Body-Arrows {
+        top: 33%;
+    }
+    .Body-List {
+        top: 34%;
+    } 
+    .Body-Random {
+        top: 86%;
+    }
+    p {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-height: 600px){
+    .App-Queries{
+        top: 59%;
+    }
+    .Body-Antboxes {
+       top: 33%;
+    }
+    .Body-Description {
+        top: 36%;
+    }
+    .Body-Info {
+        top: 36%;
+    }
+    .Body-Images {
+        top: 36%;
+    }
+    .Body-Arrows {
+        top: 35%;
+    }
+    .Body-List {
+        top: 36%;
+    } 
+    .Body-Random {
+        top: 95%;
+    }
+    p {
+        font-size: 80%;
+    }
 }

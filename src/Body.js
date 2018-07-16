@@ -148,19 +148,19 @@ class Body extends Component {
                     </div>
 
                     <div className="Body-Antboxes" align="center">
-                        <div className="Body-Antbox">
+                        <div className="Body-Antbox" layout="responsive">
                             <img src={bot.images[0]} alt="logo" width="100px" height="100px" className="Antbox-Image" />
                         </div>
                         <div>
-                            <div align="center" className="Body-List">
+                            <div align="center" className="Body-List" layout="responsive">
                                 <p>Results</p>
                                 <h2> <b>{this.state.ants.length}</b> </h2>
                             </div>
-                            <div align="center" className="Body-Description" >
+                            <div align="center" className="Body-Description" layout="responsive" >
                                 <h2> {mid.species} </h2>
                                 <p className="Body-Description-Text"> {mid.description} </p>
                             </div>
-                            <div align="center" className="Body-Info">
+                            <div align="center" className="Body-Info" layout="responsive">
                                 <h3> Location:</h3>
                                 <p> {mid.location} </p>
                                 <h3> Hibernation:</h3>
@@ -174,17 +174,17 @@ class Body extends Component {
                                 <h3> Keeping difficulty rating:</h3>
                                 <p><b>{mid.rating}</b></p>
                             </div>
-                            <div align="center" className="Body-Images">
+                            <div align="center" className="Body-Images" layout="responsive">
                                 <a href={mid.images[1]} target="_blank"> <img src={mid.images[1]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
                                 <a href={mid.images[2]} target="_blank"> <img src={mid.images[2]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
                             </div>
 
-                            <div align="center" className="Body-Arrows">
+                            <div align="center" className="Body-Arrows" layout="responsive">
                                 <img src={up} alt="up" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
                                 <img src={down} alt="down" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
                             </div>
 
-                            <div>
+                            <div layout="responsive">
                                 <img src={mid.images[0]} alt="logo" width="180px" height="180px" className="Antbox-ImageMid" />
                             </div>
                         </div>
