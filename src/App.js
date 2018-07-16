@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './ants.gif';
 import BG from './background.png';
-import './App.css';
+import './Body';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NotFound from "./NotFound"
 import Body from "./Body"
