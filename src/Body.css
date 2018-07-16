@@ -162,7 +162,7 @@ margin: 20%;
     border-color: chartreuse;
     background-color: darkgreen;
     position: fixed;
-    top: 76.5%;
+    top: 75.5%;
     left: 35.5%;
     font-size: 80%;
     box-shadow: rgb(51, 51, 51) 0 5px 5px;
@@ -211,4 +211,269 @@ input.button {
 
 p{
     margin: 1%;
+}
+
+
+@media screen and (max-width: 1920px){
+    .App-Queries{
+        top: 54%;
+        left: 36%;
+        width: 4.5%;
+       font-size: 78%;
+    }
+    
+    .App-Loading {
+        left: 30%
+    }
+    
+    .App-Missing {
+        left: 26%; 
+    }
+    
+    .Body-Antboxes {
+        top: 35%;
+        left: 42%;
+    }
+    
+    .Body-Antbox {
+        margin: 25%;
+    }
+    
+    .Body-Description {
+        padding: 8px 8px;
+        width: 27%;
+        top: 39%;
+        left: 6%;
+        font-size: 100%;
+    }
+    
+    .Body-Info {
+        width: 17%;
+        top: 39%;
+        left: 60%;
+        font-size: 95%;
+    }
+    
+    .Body-Images {
+        top: 39%;
+        left: 80%;
+        position: fixed;
+    }
+    
+    .Body-Arrows {
+        top: 53%;
+    }
+    
+    .Body-Arrow {
+    margin: 25%;
+    }
+    
+    .Body-List {
+        top: 39%;
+        font-size: 90%;
+    }
+    
+    .Body-Random {
+        padding: 35px 2px;
+        top: 78%;
+        left: 35.5%;
+        font-size: 95%;
+        box-shadow: rgb(51, 51, 51) 0 5px 5px;
+        font-family: "pixelex",Arial, sans-serif;
+    }
+   
+    p{
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .App-Queries{
+        top: 50%;
+        left: 34%;
+        width:6.6%;
+       font-size: 78%;
+    }
+    
+    .App-Loading {
+        left: 30%;
+        position: fixed;
+    }
+    
+    .App-Missing {
+        left: 26%;
+        position: fixed;
+    }
+    
+    .Body-Antboxes {
+        top: 31%;
+        left: 42%;
+    }
+    
+    .Body-Antbox {
+        margin: 10%;
+    }
+    
+    .Body-Description {
+        width: 28%;
+        top: 34%;
+        left: 3%;
+        font-size: 78%;
+    }
+    
+    .Body-Description-Text{
+        margin: 1%;
+    }
+    
+    .Body-Info {
+        width: 18%;
+        top: 34%;
+        left: 61.5%;
+        font-size: 72%;
+    }
+    
+    .Body-Images {
+        width: 15%;
+        top: 34%;
+        left: 82%;
+    }
+    
+    .Body-Image {
+        margin: 2%;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #000000;
+    }
+    
+    .Body-Arrows {
+        top: 33%;
+        left: 54%;
+    }
+    
+    .Body-Arrow {
+        height: 65px;
+        width: 65px;
+    margin: 20%;
+    }
+    
+    .Body-List {
+        top: 34%;
+        left: 34%;
+    }
+    
+    .Body-Random {
+        padding: 30px 2px;
+        top: 82%;
+        left: 33.5%;
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .App-Queries{
+        top: 46%;
+        left: 33.5%;
+        width: 8%;
+       box-shadow: rgb(51, 51, 51) 0 5px 5px;
+       font-family: "pixelex",Arial, sans-serif;
+       font-size: 78%;
+    }
+    
+    .App-Loading {
+        left: 30%;
+        position: fixed;
+    }
+    
+    .App-Missing {
+        left: 26%;
+        position: fixed;
+    }
+    
+    .form-dropdown{
+        width: 78px;
+        padding: 6px 6px;
+        border-style: double;
+        border-width: 3px;
+        border-color: chartreuse;
+        background-color: darkgreen;
+        color: chartreuse;
+        font-weight: bold;
+        font-size: 70%;
+        font-family: "pixelex",Arial, sans-serif;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        margin: 3%;
+    }
+    
+    .form-group {
+        margin: 1%;
+        width: fit-content;
+    }
+    
+    .Body-Antboxes {
+        top: 23.5%;
+        left: 42.5%;
+    }
+    
+    .Body-Antbox {
+        margin: 15%;
+    }
+    
+    .Body-Description {
+        width: 28%;
+        top: 26%;
+        left: 3%;
+        font-size: 70%;
+    }
+    
+    .Body-Description-Text{
+        margin: 1%;
+    }
+    
+    .Body-Info {
+        width: 13%;
+        top: 26%;
+        left: 64%;
+        font-size: 70%;
+    }
+    
+    .Body-Images {
+        width: 16%;
+        top: 26%;
+        left: 80%;
+        position: fixed;
+    }
+    
+    .Body-Image {
+        width: 150px;
+        height: 150px;
+        margin: 1%;
+    }
+    
+    .Body-Arrows {
+        top: 26%;
+        left: 57%;
+    }
+    
+    .Body-Arrow {
+        height: 50px;
+        width: 50px;
+    margin: 20%;
+    }
+    
+    .Body-List {
+        top: 26%;
+        left: 34%;
+        font-size: 80%;
+    }
+    
+    .Body-Random {
+        top: 77%;
+        left: 34%;
+        font-size: 70%;
+    }
+    
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
-import {random} from "lodash"
+import { random } from "lodash"
 import Ant from './ant head.gif'
 import Loading from './loading.png'
 import up from './arrowUp.png'
@@ -24,7 +24,7 @@ class Body extends Component {
     componentDidMount() {
         window.addEventListener('wheel', this.handleScroll, true)
         fetchAnts().then(ants => {
-            this.setState({ ants, loading: false})
+            this.setState({ ants, loading: false })
             this.setState({ bottomAnt: this.state.ants.length - 1 })
         }).catch(() => {
             this.props.history.push('/404')
@@ -34,8 +34,7 @@ class Body extends Component {
     onChange = event =>
         this.setState({
             ...this.state, [event.target.name]: event.target.value
-        }, () => {
-        }
+        }, () => {}
         )
 
     handleClick = () => {
@@ -47,20 +46,21 @@ class Body extends Component {
     }
 
     handleClickRandom = () => {
-       let randomAnt = random(this.state.ants.length)
-        while (randomAnt === this.state.middleAnt) {random(this.state.ants.length)}
-    
-        this.setState({ middleAnt: randomAnt})
+        
+        let randomAnt = random(this.state.ants.length-1)
+        while (randomAnt === this.state.middleAnt) { randomAnt = random(this.state.ants.length-1) }
 
-        if (this.state.ants[randomAnt-1] === undefined) {
-            this.setState({bottomAnt: this.state.ants.length-1})
-        }
-        else {this.setState({bottomAnt: randomAnt-1})}
+        this.setState({ middleAnt: randomAnt })
 
-        if (this.state.ants[randomAnt+1] === undefined) {
-            this.setState({topAnt: 0})
+        if (this.state.ants[randomAnt - 1] === undefined) {
+            this.setState({ bottomAnt: this.state.ants.length - 1 })
         }
-        else {this.setState({topAnt: randomAnt+1})}
+        else { this.setState({ bottomAnt: randomAnt - 1 }) }
+
+        if (this.state.ants[randomAnt + 1] === undefined) {
+            this.setState({ topAnt: 0 })
+        }
+        else { this.setState({ topAnt: randomAnt + 1 }) }
     }
 
     handleScroll = (e) => {
@@ -87,7 +87,7 @@ class Body extends Component {
     }
 
     render() {
-
+    
         const { ants, loading, bottomAnt, middleAnt, topAnt } = this.state
 
         let bot = ants[bottomAnt]
@@ -98,6 +98,7 @@ class Body extends Component {
         if (top === undefined) top = this.state.fakeAnt
 
         return (
+            
             !loading ?
                 <React.Fragment>
                     <div>
@@ -155,7 +156,7 @@ class Body extends Component {
                                 <p>Results</p>
                                 <h2> <b>{this.state.ants.length}</b> </h2>
                             </div>
-                            <div align="center" className="Body-Description">
+                            <div align="center" className="Body-Description" >
                                 <h2> {mid.species} </h2>
                                 <p className="Body-Description-Text"> {mid.description} </p>
                             </div>
@@ -177,7 +178,7 @@ class Body extends Component {
                                 <a href={mid.images[1]} target="_blank"> <img src={mid.images[1]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
                                 <a href={mid.images[2]} target="_blank"> <img src={mid.images[2]} alt="ant one" width="180px" height="180px" className="Body-Image" /></a>
                             </div>
-                        
+
                             <div align="center" className="Body-Arrows">
                                 <img src={up} alt="up" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
                                 <img src={down} alt="down" width="80px" height="80px" className="Body-Arrow" onClick={this.handleScroll} />
@@ -192,16 +193,16 @@ class Body extends Component {
                             <img src={top.images[0]} alt="logo" width="100px" height="100px" className="Antbox-Image" />
                         </div>
 
-                         <div>
-                             {ants.length > 3 && <input className="Body-Random" type="button" value="Random Ant" onClick={this.handleClickRandom} />}      
-                            </div>
+                        <div>
+                            {ants.length > 3 && <input className="Body-Random" type="button" value="Random Ant" onClick={this.handleClickRandom} />}
+                        </div>
 
                     </div>
 
                 </React.Fragment>
                 :
                 <div className="App-Loading">
-                     <img src={Loading} alt="Loading..." />
+                    <img src={Loading} alt="Loading..." />
                 </div>
         );
     }
