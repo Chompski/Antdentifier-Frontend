@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Body.css';
 import { fetchAnts } from "./API";
+import {random} from "lodash"
 import Ant from './ant head.gif'
 import Loading from './loading.png'
 import up from './arrowUp.png'
@@ -37,12 +38,29 @@ class Body extends Component {
         }
         )
 
-    handleClick = (event) => {
+    handleClick = () => {
         fetchAnts(this.state.colour, this.state.location, this.state.rating).then(ants => {
             this.setState({ ants })
             if (this.state.ants.length > 1) this.setState({ topAnt: 1, middleAnt: 0, bottomAnt: this.state.ants.length - 1 })
             else { this.setState({ topAnt: 2, middleAnt: 0, bottomAnt: 2 }) }
         })
+    }
+
+    handleClickRandom = () => {
+       let randomAnt = random(this.state.ants.length)
+        while (randomAnt === this.state.middleAnt) {random(this.state.ants.length)}
+    
+        this.setState({ middleAnt: randomAnt})
+
+        if (this.state.ants[randomAnt-1] === undefined) {
+            this.setState({bottomAnt: this.state.ants.length-1})
+        }
+        else {this.setState({bottomAnt: randomAnt-1})}
+
+        if (this.state.ants[randomAnt+1] === undefined) {
+            this.setState({topAnt: 0})
+        }
+        else {this.setState({topAnt: randomAnt+1})}
     }
 
     handleScroll = (e) => {
@@ -69,6 +87,7 @@ class Body extends Component {
     }
 
     render() {
+
         const { ants, loading, bottomAnt, middleAnt, topAnt } = this.state
 
         let bot = ants[bottomAnt]
@@ -172,6 +191,10 @@ class Body extends Component {
                         <div className="Body-Antbox">
                             <img src={top.images[0]} alt="logo" width="100px" height="100px" className="Antbox-Image" />
                         </div>
+
+                         <div>
+                             {ants.length > 3 && <input className="Body-Random" type="button" value="Random Ant" onClick={this.handleClickRandom} />}      
+                            </div>
 
                     </div>
 
