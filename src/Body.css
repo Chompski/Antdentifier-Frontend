@@ -607,7 +607,7 @@ p{
     }
 }
 
-@media screen and (min-height: 667px) and (min-width: 375px){
+@media screen and (max-height: 667px) and (max-width: 375px){
     .App-Queries{
         flex-direction: row;
         top: 71%;
