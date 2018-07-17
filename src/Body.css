@@ -6,9 +6,18 @@
     url("css/fonts/pixelex-webfont.ttf") format("opentype"),
     }
 
+    @font-face {
+        font-family: "tribeca";
+        src: url("css/fonts/tribeca-webfont.woff");
+        src:
+        url("css/fonts/tribeca-webfont.woff") format("woff"),
+        }
+
 .App-logo {
-        top: 0%;
-    width: 100%;
+    position: fixed; 
+        top: 0;
+        left: 0; 
+    width: 101%;
     }
     
 #bg {
@@ -41,7 +50,7 @@
     flex-direction: column;
    position: fixed;
    box-shadow: rgb(51, 51, 51) 0 5px 5px;
-   font-family: "pixelex",Arial, sans-serif;
+   font-family: "tribeca";
    font-size: 78%;
 }
 
@@ -65,7 +74,7 @@
     color: chartreuse;
     font-weight: bold;
     font-size: 70%;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
@@ -103,7 +112,7 @@
     position: fixed;
     font-size: 90%;
     box-shadow: rgb(51, 51, 51) 0 5px 5px;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
 }
 
 .Body-Description-Text{
@@ -123,7 +132,7 @@
     position: fixed;
     font-size: 90%;
     box-shadow: rgb(51, 51, 51) 0 5px 5px;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
 }
 
 .Body-Images {
@@ -172,7 +181,7 @@ margin: 20%;
     top: 37%;
     left: 36%;
     font-size: 80%;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
 }
 
 .Body-Random {
@@ -188,7 +197,7 @@ margin: 20%;
     left: 35.5%;
     font-size: 80%;
     box-shadow: rgb(51, 51, 51) 0 5px 5px;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
 }
 
 .Antbox-Image {
@@ -227,7 +236,7 @@ input.button {
     min-height: 30px;
     font-weight: bold;
     text-align: center;
-    font-family: "pixelex",Arial, sans-serif;
+    font-family: "tribeca";
     font-size: 80%;
 }
 
@@ -261,20 +270,19 @@ p{
     
     .Body-Description {
         padding: 8px 8px;
-        width: 27%;
-        left: 6%;
-        font-size: 100%;
+        width: 30%;
+        left: 4%;
+        font-size: 103%;
     }
     
     .Body-Info {
-        width: 17%;
-        left: 60%;
-        font-size: 95%;
+        width: 24%;
+        left: 58.5%;
+        font-size: 100%;
     }
     
     .Body-Images {
-        left: 80%;
-        position: fixed;
+        left: 84.5%;
     }
 
     .Body-Antboxes {
@@ -458,10 +466,10 @@ p{
 
 @media screen and (max-height: 1080px){
     .App-Queries{
-        top: 57%;
+        top: 55%;
     }
     .Body-Antboxes {
-       top: 38%;
+       top: 33%;
     }
     .Body-Description {
         top: 38%;
@@ -479,7 +487,7 @@ p{
         top: 38%;
     }
     .Body-Random {
-        top: 86%;
+        top: 82%;
     } 
 }
 @media screen and (max-height: 900px){
@@ -568,6 +576,7 @@ p{
     }
 }
 
+
 @media screen and (max-height: 600px){
     .App-Queries{
         top: 59%;
@@ -592,6 +601,73 @@ p{
     } 
     .Body-Random {
         top: 95%;
+    }
+    p {
+        font-size: 80%;
+    }
+}
+
+@media screen and (min-height: 667px) and (min-width: 375px){
+    .App-Queries{
+        flex-direction: row;
+        top: 71%;
+        left: 6%;
+        width: fit-content;
+    }
+    .Body-Antboxes {
+       top: 6%;
+       left: 55%;
+       width: 50%;
+       height: 50%;
+    }
+
+    .Antbox-Image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .Antbox-ImageMid {
+        width: 130px;
+        height: 130px;
+        margin: 1%;
+    }
+
+    .Body-Description {
+        top: 80.5%;
+        width: 92%;
+        left: 1%;
+        font-size: 40%;
+    }
+    .Body-Info {
+        top: 12%;
+        left: 1.5%;
+        width: 48%;
+        font-size: 50%;
+    }
+    .Body-Images {
+        flex-direction: row;
+        height: fit-content;
+        width: fit-content;
+        top: 52%;
+        left: 1%;
+    }
+    .Body-Image {
+        width: 85px;
+        height: 85px;
+        margin: 2%;
+    }
+    .Body-Arrows {
+        top: 16%;
+        left: 53.2%;
+    }
+    .Body-List {
+        top: 36%;
+    } 
+    .Body-Random {
+        top: 0%;
+        width: 20%;
+        height: 5%;
+        display: none;
     }
     p {
         font-size: 80%;
