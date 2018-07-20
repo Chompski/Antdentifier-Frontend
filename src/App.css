@@ -1,0 +1,207 @@
+
+     @font-face {
+        font-family: "tribeca";
+        src: url("css/fonts/tribeca-webfont.woff");
+        src:
+        url("css/fonts/tribeca-webfont.woff") format("woff"),
+        } 
+
+img {
+    display: inline-block;
+}
+
+.App-Decor {
+    border-style: double;
+    border-width: 3px;
+    border-color: #000000;
+    box-shadow: rgb(51, 51, 51) 0 5px 5px;
+    font-family: "tribeca";
+    margin: 0.5rem;
+}  
+
+p {
+    margin: 0%;
+}
+
+main {  
+    padding: 2rem;
+    padding-top: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.App-logo {
+        margin-bottom: -4rem;
+        width: 100vw;
+        }
+      
+#bg {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      } 
+    
+ .App-Main {
+     display: flex;
+     flex-direction: row;
+ }
+
+.App-Queries{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(129, 91, 52);
+    padding: 1px;
+    max-width: 10rem;
+    margin: 1rem;
+}
+/* 
+.App-Loading {
+    left: 30%;
+    position: fixed;
+}
+
+.App-Missing {
+    left: 26%;
+    position: fixed;
+} */
+
+.form-dropdown{
+    padding: 6px;
+    border-style: double;
+    border-width: 3px;
+    border-color: chartreuse;
+    background-color: darkgreen;
+    color: chartreuse;
+    font-weight: bold;
+    font-size: 70%;
+    min-width: 5rem;
+    font-family: "tribeca";
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    margin: 0.5rem;
+}
+
+.form-group {
+}
+
+.Body-Antboxes {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+ .Body-Description {
+    max-width: 28rem;
+    min-width: 28rem;
+    border-radius: 20px;
+    background-color: rgb(129, 91, 52);
+    font-size: 100%;
+    padding: 1rem;
+} 
+
+.Body-Description-Text{
+
+}
+
+.Body-Info {
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    min-width: 24rem;
+    padding: 2px;
+    border-radius: 20px;
+    font-size: 100%;
+    background-color: rgb(129, 91, 52);
+}
+
+.Body-Images {
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(129, 91, 52);
+}
+
+.Body-Image {
+    padding: 1rem;
+width: 14rem;
+height: 14rem;
+}
+
+.Body-Arrows {
+    display: flex;
+    flex-direction: column;
+}
+
+.Body-Arrow {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 9rem;
+    margin-right: 1rem;
+}
+
+.Body-List {
+    padding: 4px 4px;
+    font-size: 80%;
+    background-color: rgb(129, 91, 52);
+}
+
+.Body-Random {
+    margin-top: 3rem;
+    padding: 40px 2px;
+    color: chartreuse;
+    border-style: double;
+    border-color: chartreuse;
+    background-color: darkgreen;
+    font-size: 70%;
+    font-weight: bold;
+    font-family: "tribeca";
+    border-width: 0.4rem;
+}
+
+.Antbox-Image {
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem;
+    border-radius: 150px;
+    border-style: double;
+    border-width: 3px;
+    border-color: #000000;
+    box-shadow: rgb(51, 51, 51) 0 2px 2px;
+}
+
+.Antbox-ImageMid {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 300px;
+    border-style: double;
+    border-width: 5px;
+    border-color: #000000;
+    box-shadow: rgb(51, 51, 51) 0 8px 8px;
+ 
+} 
+
+input.button {
+    border-style: solid;
+    border-width: 5px;
+    border-color: chartreuse;
+    color: chartreuse;
+    background-color: darkgreen;
+    border-radius: 30px;
+    border-style: double;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-family: "tribeca";
+    font-size: 100%;
+    margin: 1rem;
+    padding: 20px 20px;
+} 
+
