@@ -219,14 +219,16 @@ input.button {
 
 @media screen and (max-width: 1023px){
     .App-logo {
-        top: 0%;
         margin-bottom: -1rem;
         width: 100vw;
         }
 
     .Body-Description {
-        width: 75vw;
-        display: none
+        width: 70vw;
+        font-size: 80%;
+    }
+    .Body-Description-Text{
+        display: none;
     }
     .App-Queries, .Body-Antboxes{
         width: 35vw;
