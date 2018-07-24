@@ -32,7 +32,7 @@ main {
 
 .App-logo {
         margin-bottom: -5rem;
-        width: 100vw;
+        min-width: 100%;
         }
 
 .App-Loading {
@@ -46,8 +46,8 @@ main {
         position: fixed; 
         top: 0; 
         left: 0; 
-        min-width: 100%;
-        min-height: 100%;
+        min-width: 100rem;
+        min-height: 100rem;
         z-index: -1;
       } 
     
@@ -148,9 +148,8 @@ height: 14rem;
 
 .Body-List {
     padding: 4px 4px;
-    font-size: 80%;
+    font-size: 100%;
     background-color: rgb(129, 91, 52);
-    max-width: 4rem;
 }
 
 .Body-Random {
@@ -201,6 +200,7 @@ input.button {
     font-family: "tribeca";
     font-size: 100%;
     padding: 20px 20px;
+    margin-top: 1rem;
 } 
 
 @media screen and (min-width: 1023px){
@@ -215,18 +215,22 @@ input.button {
         width:100vw;
         margin: 0.5rem;
     }
+    .Body-Images {
+    }
 }
 
 @media screen and (max-width: 1023px){
     .App-logo {
-        top: 0%;
-        margin-bottom: -1rem;
+        margin-bottom: -3rem;
         width: 100vw;
         }
 
     .Body-Description {
-        width: 75vw;
-        display: none
+        width: 70vw;
+        font-size: 80%;
+    }
+    .Body-Description-Text{
+        display: none;
     }
     .App-Queries, .Body-Antboxes{
         width: 35vw;
@@ -256,5 +260,5 @@ input.button {
     }
     .Body-Arrows {
     margin: 0.5rem;
-        }
+    }
 }
