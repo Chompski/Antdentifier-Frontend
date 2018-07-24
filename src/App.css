@@ -27,12 +27,20 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0.5rem;
 }
 
 .App-logo {
-        margin-bottom: -6rem;
+        margin-bottom: -5rem;
         width: 100vw;
         }
+
+.App-Loading {
+    display: flex;
+   flex-grow: 1;
+   margin-top: 10rem;
+   margin-left: 32rem;
+}
       
 #bg {
         position: fixed; 
@@ -134,7 +142,6 @@ height: 14rem;
 .Body-Arrow {
     width: 5rem;
     height: 5rem;
-    /* margin-top: 9rem; */
     margin-right: 1rem;
     margin-left:2.6rem;
 }
@@ -178,7 +185,6 @@ height: 14rem;
     border-width: 5px;
     border-color: #000000;
     box-shadow: rgb(51, 51, 51) 0 8px 8px;
- 
 } 
 
 input.button {
@@ -207,6 +213,7 @@ input.button {
     }
     main {
         width:100vw;
+        margin: 0.5rem;
     }
 }
 
