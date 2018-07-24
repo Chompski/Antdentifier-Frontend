@@ -148,9 +148,8 @@ height: 14rem;
 
 .Body-List {
     padding: 4px 4px;
-    font-size: 80%;
+    font-size: 100%;
     background-color: rgb(129, 91, 52);
-    max-width: 4rem;
 }
 
 .Body-Random {
@@ -201,7 +200,7 @@ input.button {
     font-family: "tribeca";
     font-size: 100%;
     padding: 20px 20px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 } 
 
 @media screen and (min-width: 1023px){

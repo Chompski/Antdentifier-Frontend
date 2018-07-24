@@ -140,7 +140,7 @@ class Body extends Component {
                                 </select>
                             </div>
                             <div align="center">
-                                <div className="Body-List App-Decor" align="center">
+                                <div className="Body-List" align="center">
                                     <p>Results</p>
                                     <h2> <b>{this.state.ants.length}</b> </h2>
                                 </div>
