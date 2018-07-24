@@ -24,8 +24,6 @@ p {
 }
 
 main {  
-    padding: 2rem;
-    padding-top: 0rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -46,8 +44,10 @@ main {
       } 
     
  .App-Main {
+     margin: 1rem;
+     width:100%;
      display: flex;
-     flex-direction: row;
+     flex-flow: row wrap;
  }
 
 .App-Queries{
@@ -56,7 +56,7 @@ main {
     flex-direction: column;
     background-color: rgb(129, 91, 52);
     padding: 1px;
-    max-width: 10rem;
+    width: 9rem;
     margin: 1rem;
 }
 /* 
@@ -89,6 +89,7 @@ main {
 }
 
 .form-group {
+    margin: 0.5rem;
 }
 
 .Body-Antboxes {
@@ -98,8 +99,8 @@ main {
 }
 
  .Body-Description {
-    max-width: 28rem;
-    min-width: 28rem;
+    /* max-width: 28vw; */
+    width: 28vw;
     border-radius: 20px;
     background-color: rgb(129, 91, 52);
     font-size: 100%;
@@ -113,8 +114,7 @@ main {
 .Body-Info {
     display: flex;
     flex-direction: column;
-    max-width: 24rem;
-    min-width: 24rem;
+    width: 22vw;
     padding: 2px;
     border-radius: 20px;
     font-size: 100%;
@@ -127,6 +127,7 @@ main {
     flex-direction: column;
     border-radius: 20px;
     background-color: rgb(129, 91, 52);
+    margin: 1rem;
 }
 
 .Body-Image {
@@ -138,19 +139,22 @@ height: 14rem;
 .Body-Arrows {
     display: flex;
     flex-direction: column;
+    margin: 1rem;
 }
 
 .Body-Arrow {
     width: 5rem;
     height: 5rem;
-    margin-top: 9rem;
+    /* margin-top: 9rem; */
     margin-right: 1rem;
+    margin-left:2.6rem;
 }
 
 .Body-List {
     padding: 4px 4px;
     font-size: 80%;
     background-color: rgb(129, 91, 52);
+    max-width: 4rem;
 }
 
 .Body-Random {
@@ -167,8 +171,8 @@ height: 14rem;
 }
 
 .Antbox-Image {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     margin: 1rem;
     border-radius: 150px;
     border-style: double;
@@ -178,8 +182,8 @@ height: 14rem;
 }
 
 .Antbox-ImageMid {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 300px;
     border-style: double;
     border-width: 5px;
@@ -201,7 +205,58 @@ input.button {
     text-align: center;
     font-family: "tribeca";
     font-size: 100%;
-    margin: 1rem;
     padding: 20px 20px;
 } 
 
+@media screen and (min-width: 1023px){
+    .App {
+        width: 100vw;
+        flex-direction: row
+    }
+    .App-Main {
+        width: 100vw;
+    }
+    main {
+        width:100vw;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .App-logo {
+        top: 0%;
+        margin-bottom: -1rem;
+        width: 100vw;
+        }
+
+    .Body-Description {
+        width: 75vw;
+        display: none
+        /* flex-direction: row */
+    }
+    .App-Queries, .Body-Antboxes{
+        width: 35vw;
+    }
+    .Body-Antboxs {
+        display: flex;
+        flex-flow: column;
+        margin: 0.5rem;
+    }
+    .Antbox-Image {
+        width: 6rem;
+        height: 6rem;
+    }
+    .Antbox-ImageMid {
+    width: 8rem;
+        height: 8rem;
+    }
+    .Body-Arrow {
+    width: 5rem;
+    height: 5rem;
+    /* margin-top: 9rem; */
+    margin-right: 1rem;
+    margin-left: 2rem;
+    }
+    .Body-Info {
+    width: 80vw;
+    }
+}

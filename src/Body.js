@@ -139,12 +139,12 @@ class Body extends Component {
                                     <option value="5">5</option>
                                 </select>
                             </div>
-
-                            <div className="Body-List App-Decor" align="center">
-                                <p>Results</p>
-                                <h2> <b>{this.state.ants.length}</b> </h2>
+                            <div align="center">
+                                <div className="Body-List App-Decor" align="center">
+                                    <p>Results</p>
+                                    <h2> <b>{this.state.ants.length}</b> </h2>
+                                </div>
                             </div>
-
                             <div className="form-group" align="center">
                                 <input className='button' type="button" value="Search" onClick={this.handleClick} />
                             </div>
@@ -152,18 +152,22 @@ class Body extends Component {
                             <div align="center">
                                 {ants.length > 3 && <input className="Body-Random" type="button" value="Random Ant" onClick={this.handleClickRandom} />}
                             </div>
-
                         </form>
-
-
-                        <div className="Body-Antboxs" align="center">
-                            <img src={bot.images[0]} alt="logo" className="Antbox-Image" />
-                            <img src={mid.images[0]} alt="logo" className="Antbox-ImageMid" />
-                            <img src={top.images[0]} alt="logo" className="Antbox-Image" />
-                        </div>
 
                         <div className="Body-Arrows">
                             <img src={up} alt="up" className="Body-Arrow" onClick={this.handleScroll} />
+
+                            <div className="Body-Antboxes" align="center">
+                                <div>
+                                    <img src={bot.images[0]} alt="logo" className="Antbox-Image" />
+                                </div>
+                                <div>
+                                    <img src={mid.images[0]} alt="logo" className="Antbox-ImageMid" />
+                                </div>
+                                <div>
+                                    <img src={top.images[0]} alt="logo" className="Antbox-Image" />
+                                </div>
+                            </div>
                             <img src={down} alt="down" className="Body-Arrow" onClick={this.handleScroll} />
                         </div>
 
@@ -186,8 +190,6 @@ class Body extends Component {
                             <a href={mid.images[1]} target="_blank"> <img src={mid.images[1]} alt="ant one" className="Body-Image App-Decor" /></a>
                             <a href={mid.images[2]} target="_blank"> <img src={mid.images[2]} alt="ant one" className="Body-Image App-Decor" /></a>
                         </div>
-
-
                     </div>
 
 
