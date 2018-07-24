@@ -30,7 +30,7 @@ main {
 }
 
 .App-logo {
-        margin-bottom: -4rem;
+        margin-bottom: -6rem;
         width: 100vw;
         }
       
@@ -59,16 +59,6 @@ main {
     width: 9rem;
     margin: 1rem;
 }
-/* 
-.App-Loading {
-    left: 30%;
-    position: fixed;
-}
-
-.App-Missing {
-    left: 26%;
-    position: fixed;
-} */
 
 .form-dropdown{
     padding: 6px;
@@ -99,7 +89,6 @@ main {
 }
 
  .Body-Description {
-    /* max-width: 28vw; */
     width: 28vw;
     border-radius: 20px;
     background-color: rgb(129, 91, 52);
@@ -231,10 +220,10 @@ input.button {
     .Body-Description {
         width: 75vw;
         display: none
-        /* flex-direction: row */
     }
     .App-Queries, .Body-Antboxes{
         width: 35vw;
+        margin:0.5rem;
     }
     .Body-Antboxs {
         display: flex;
@@ -252,11 +241,13 @@ input.button {
     .Body-Arrow {
     width: 5rem;
     height: 5rem;
-    /* margin-top: 9rem; */
     margin-right: 1rem;
     margin-left: 2rem;
     }
     .Body-Info {
     width: 80vw;
     }
+    .Body-Arrows {
+    margin: 0.5rem;
+        }
 }
