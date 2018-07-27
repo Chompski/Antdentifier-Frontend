@@ -203,7 +203,7 @@ input.button {
     margin-top: 1rem;
 } 
 
-@media screen and (min-width: 1023px){
+@media screen and (min-width: 1281px){
     .App {
         width: 100vw;
         flex-direction: row
@@ -261,4 +261,40 @@ input.button {
     .Body-Arrows {
     margin: 0.5rem;
     }
+}
+
+@media screen and (min-width: 1024px) and (max-width:1280px){
+    .App {
+        width: 100vw;
+        flex-direction: row
+    }
+    .App-Main {
+        width: 100vw;
+    }
+    main {
+        width:100vw;
+        margin: 0.5rem;
+    }
+    .Body-Images {
+        width: 19.5vw;
+        height: auto;
+    }
+    .Body-Image {
+        margin-top: 3vw;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .Body-Description {
+        width: 23vw;
+        font-size: 80%;
+    }
+
+    .App-Queries {
+        width: 10.8vw;
+        margin:0.5rem;
+    }
+    .Body-Info {
+        width: 15vw;
+        }
 }
